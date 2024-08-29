@@ -1,1 +1,5 @@
 mkdocs-material==9.5.33
+mkdocs-git-revision-date-plugin 
+mkdocs-redirects 
+mkdocs-minify-plugin 
+testresources
