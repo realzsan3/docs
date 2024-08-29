@@ -1,8 +1,7 @@
 # Manage a bill
 
 !!! tip
-    I've not yet finished writing this tutorial. Some items may not be filled in yet. I apologize for the inconvenience. Please refer to the [support page](../../explanation/support.md) if you have questions.
-
+      我还没有完成编写本教程。某些项目可能尚未填写。对于造成的不便，我们深表歉意。如果您有任何问题，请参阅 [支持页面](../../explanation/support.md)。
 You can use bills to track regular income from your accounts to any third party. To read more about bills, see also:
 
 - [An explanation about bills](../../explanation/financial-concepts/bills.md)
@@ -26,7 +25,7 @@ The optional fields on the right allow you to give the bill an end date and an e
 
 ### Create a rule
 
-If you press "Store new bill" you get redirected to the form to create a new rule. You can read about this on the page [how to manage rules](../../how-to/firefly-iii/features/rules.md). 
+If you press "Store new bill" you get redirected to the form to create a new rule. You can read about this on the page [how to manage rules](../../how-to/firefly-iii/features/rules.md).
 
 For this tutorial, we will skip this step. In the left-hand menu, click Bills again.
 

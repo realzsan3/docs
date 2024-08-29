@@ -1,31 +1,31 @@
-# How to manage accounts
+# 如何管理账户
 
-Although there's plenty of variation that you can apply here, this is how I recommend you manage accounts.
+尽管您可以在这里应用多种变化，但我建议您按照以下方式管理账户。
 
-See also:
+另请参阅：
 
-- [Tutorial: create accounts and transactions](../../../tutorials/finances/first-steps.md)
-- [Tutorial: my first accounts](../../../tutorials/finances/first-accounts.md)
-- [Reference: all account types](../../../references/firefly-iii/account-types.md)
+- [教程：创建账户和交易](../../../tutorials/finances/first-steps.md)
+- [教程：我的第一个账户](../../../tutorials/finances/first-accounts.md)
+- [参考：所有账户类型](../../../references/firefly-iii/account-types.md)
 
-## Asset accounts
+## 资产账户
 
-Create one asset account for each bank account you have. Also create asset accounts for your savings accounts and credit cards.
+为您的每个银行账户创建一个资产账户。  也为您的储蓄账户和信用卡创建资产账户。
 
-Other financial apps advise you to save your credit card as a liability, but in Firefly III I recommend you create it as an asset account.
+其他金融应用程序建议您将信用卡保存为负债，但在 Firefly III 中，我建议您将其创建为资产账户。
 
-## Liabilities
+## 负债账户
 
-Create a liability for each outstanding or incoming loan. For example, your mortgage or student debt. Set the amount as a positive number. 
+为每笔未偿还或即将到期的贷款创建一个负债账户。例如，您的抵押贷款或学生贷款。将金额设置为正数。
 
-## Other account types
+## 其他账户类型
 
-You don't need to create expense accounts and revenue accounts, they are automatically created when you create a transaction. 
+您不需要创建支出账户和收入账户，当您创建交易时会自动创建它们。
 
-## IBANs and account numbers
+##  IBAN 和账户号码
 
-If you can, add IBANs and account numbers to the accounts when you know them. This will help you when importing data.
+如果可以，请在知道 IBAN 和账户号码时将它们添加到账户中。这将帮助您导入数据。
 
-## Deleting accounts
+## 删除账户
 
-If you delete an account, any associated transactions will be removed as well. If you're deleting an asset account, and you've transferred money between the current asset account and other asset accounts, you might see changed balances all around. Remember to correct this, if necessary. You can move the transactions to a new account if you wish to preserve them.
+如果您删除一个账户，任何相关的交易也将被删除。如果您要删除一个资产账户，并且您已经在当前资产账户和其他资产账户之间转账，您可能会看到所有账户的余额都发生了变化。 请记住在必要时进行更正。如果您想保留交易，可以将它们转移到一个新的账户。

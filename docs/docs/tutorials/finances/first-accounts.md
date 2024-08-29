@@ -1,51 +1,50 @@
-# Create accounts and transactions
+# 创建账户和交易
 
-Let's assume you managed to install Firefly III using the [how-to guides](../../how-to/index.md)
+假设您已经使用[如何操作指南](../../how-to/index.md)成功安装了Firefly III。
 
-This tutorial assumes you already registered yourself, as it is explained in the [how-to guides](../../how-to/index.md), and expands upon ["my first accounts"](first-steps.md) tutorial.
+本教程假设您已经注册了自己，如[如何操作指南](../../how-to/index.md)中所述，并扩展了["我的第一个账户"](first-steps.md)教程。
 
-## Create a transaction
+## 创建交易
 
-Let's create our first transaction. Use your bank statements to find out which transactions we can create. Since we entered yesterday's balance in the account form,
-it's best to recreate yesterday's transactions by hand. We can look into importing data later.
+让我们创建我们的第一个交易。使用您的银行对账单找出我们可以创建哪些交易。由于我们在账户表单中输入了昨天的余额，因此最好手动重新创建昨天的交易。我们稍后可以研究导入数据。
 
-Click the PLUS button in the top right corner next to your email address. Then click "New withdrawal". You will see this screen:
+点击右上角您电子邮件地址旁边的PLUS按钮。然后点击“新建提款”。您将看到此屏幕：
 
-![Create transaction](../../images/tutorials/finances/create.png)
+![创建交易](../../images/tutorials/finances/create.png)
 
-There are a lot of options to fill in, but we're going to stick to the basics for now.
+有很多选项要填写，但我们现在只坚持基础知识。
 
-1. Under "Description", fill what the transaction was for. Example: "Groceries", "this month's rent" or "present for my mom".
-2. Under "Source account", use the keyboard to type your bank account name and select your main bank account from the list.
-3. Under "Destination account", type the name of the store where the transaction took place. For example: "Walmart", "Amazon" or "MacDonalds".
+1. 在“描述”下，填写交易的用途。例如：“杂货”、“本月租金”或“送给妈妈的礼物”。
+2. 在“源账户”下，使用键盘输入您的银行账户名称并从列表中选择您的主要银行账户。
+3. 在“目标账户”下，输入交易发生的地点商店的名称。例如：“沃尔玛”、“亚马逊”或“麦当劳”。
 
-Under date, you select yesterday's date using the dropdown. You can also enter the time if you wish.
+在日期下，您可以使用下拉菜单选择昨天的日期。如果需要，您还可以输入时间。
 
-Under amount, you enter the amount. The amount must always be positive, even though this is a withdrawal.
+在金额下，您输入金额。金额必须始终为正数，即使这是提款。
 
-We won't use the other fields for now. Scroll down if necessary and press "Submit".
+我们现在不会使用其他字段。如有必要，向下滚动并按“提交”。
 
-## Check the transaction
+## 检查交易
 
-You can find the transaction on your home screen on the right, or by browsing to Transactions > Withdrawals.
+您可以在主页面的右侧或通过浏览到交易 > 提款找到交易。
 
-![My first withdrawal](../../images/tutorials/finances/first-withdrawal.png)
+![我的第一个提款](../../images/tutorials/finances/first-withdrawal.png)
 
-## Create more transactions
+## 创建更多交易
 
-Just keep pressing that \(+\) button to create more transactions. Keep the following rules in mind.
+只需不断按下（+）按钮即可创建更多交易。请记住以下规则。
 
-1. New deposits need a new source account, the "[revenue account](../../references/firefly-iii/account-types.md)". To create it, just type the source of the money in the Source Account field. The account will be automatically created. For example, just type "My job" and the account will be created. The destination account must be your main asset account.
-2. Transfers between accounts can be recorded by making the source AND destination accounts point to one of your asset accounts.
+1. 新存款需要一个新的源账户，即“[收入账户](../../references/firefly-iii/account-types.md)”。要创建它，只需在源账户字段中输入资金来源。该账户将自动创建。例如，只需输入“我的工作”，该账户就会被创建。目标账户必须是您的主要资产账户。
+2. 账户之间的转账可以通过使源账户和目标账户指向您的一个资产账户来记录。
 
-You are free to add tags or set a category, but bills, budgets and piggy banks need more work. We'll get to that later.
+您可以自由添加标签或设置类别，但账单、预算和储蓄罐需要更多工作。我们稍后会谈到这一点。
 
-## Validate balance
+## 验证余额
 
-Browse to Accounts > Asset accounts. Here you should see your bank accounts and some extra's, with the correct balance.
+浏览到账户 > 资产账户。您应该在这里看到您的银行账户和一些额外的账户，以及正确的余额。
 
-## Would you like to know more?
+## 想要了解更多信息吗？
 
-- [How to organize transactions](../../how-to/firefly-iii/finances/transactions.md)
-- [How to manage budgets](../../how-to/firefly-iii/finances/budgets.md)
-- [More how to guides](../../how-to/index.md)
+- [如何组织交易](../../how-to/firefly-iii/finances/transactions.md)
+- [如何管理预算](../../how-to/firefly-iii/finances/budgets.md)
+- [更多操作指南](../../how-to/index.md)

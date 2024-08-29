@@ -3,26 +3,26 @@ hide:
   - feedback
 ---
 
-# How-to guides
+# 操作指南
 
-These how-to guides will show you how to do things. The guides are goal oriented and will get you to a specific point.
+这些操作指南将向您展示如何完成各种操作。指南以目标为导向，将引导您完成特定任务。
 
-Popular examples:
+热门示例：
 
-1. How to [install Firefly III](firefly-iii/installation/docker.md)?
-2. How to set up [email notifications](firefly-iii/advanced/notifications.md)?
-3. How to [configure GoCardless](data-importer/how-to-configure.md)?
+1. 如何 [安装 Firefly III](firefly-iii/installation/docker.md)？
+2. 如何设置 [电子邮件通知](firefly-iii/advanced/notifications.md)？
+3. 如何 [配置 GoCardless](data-importer/how-to-configure.md)？
 
-The menu on the left should guide your through the guides (hah). 
+左侧的菜单将引导您浏览指南 (哈哈)。
 
-## Missing something?
+## 缺少内容？
 
-1. You're missing a specific how-to guide, and you wish to write it
-2. You don't want to write it, but you still miss a specific how-to guide
-3. You spot inaccuracies, terrible grammar or spelling mistakes
+1. 您缺少特定的操作指南，并且想要编写它
+2. 您不想编写它，但仍然缺少特定的操作指南
+3. 您发现指南存在不准确之处、语法错误或拼写错误
 
-Please open an [issue on GitHub](https://github.com/firefly-iii/firefly-iii/issues/new?assignees=&labels=&projects=&template=fr.yml). Your contributions are appreciated.
+请在 [GitHub 上提交问题](https://github.com/firefly-iii/firefly-iii/issues/new?assignees=&labels=&projects=&template=fr.yml)。我们欢迎您的贡献。
 
-## Would you like to know more?
+## 想要了解更多信息吗？
 
-Check out the [support page](../explanation/support.md).
+请查看 [支持页面](../explanation/support.md)。

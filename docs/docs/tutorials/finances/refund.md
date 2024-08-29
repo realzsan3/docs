@@ -1,41 +1,41 @@
-# Process a refund
+# 处理退款
 
-How you process refunds is a choice. Basically, you can:
+如何处理退款取决于您的选择。基本上，您可以：
 
-1. Make the original expense disappear
-2. Keep the original expense, use the money as "income"
+1. 使原始费用消失
+2. 保留原始费用，将退款作为“收入”使用
 
-This also applies to friends who pay you back (part of) an expense. Do you want to shrink the original expense or do you want to keep the whole expense and use the money as income?
+这也适用于朋友们向您偿还（部分）费用。您是想减少原始费用，还是想保留整个费用并将退款作为收入使用？
 
-Firefly III does not offer the option to automatically merge two a refund into the original transaction. It's also different whether you create your transactions manually, or if you use the data importer to do this for you.
+Firefly III 不提供自动将退款合并到原始交易中的选项。如果您手动创建交易或使用数据导入器来完成此操作，这也会有所不同。
 
-## What do I do with people who pay me back?
+## 我如何处理朋友们向我偿还的款项？
 
-Let's say you have a budget for "Going out", worth 100. You go out with some friends, and you offer to pay the bill, expecting your friends to pay you back later. The total bill is 120 with your three friends, who owe you 90 in total. So although you spent € 120 (overspending your budget with € 20), your actual costs are a mere € 30. What to do?
+假设您有一个名为“外出”的预算，价值 100。您和一些朋友出去玩，您主动支付账单，并期望朋友们稍后向您偿还。总账单为 120，您的三位朋友欠您总计 90。因此，虽然您花了 120 欧元（超出了预算 20 欧元），但您的实际成本仅为 30 欧元。该怎么办？
 
-It's important that Firefly III won't do anything. You can't correct your budget with income, so your budget will appear to have been overspent with € 20. But you can correct this yourself. How exactly is entirely up to you.
+重要的是，Firefly III 不会做任何事情。您无法使用收入来纠正您的预算，因此您的预算看起来将超支 20 欧元。但是您可以自己纠正这一点。具体怎么做完全取决于您。
 
-1. You increase the budget with € 90 to a total of € 190. This means you still have € 70 to spend (€ 190 - € 120) but your budget is changed.
-2. You edit the expense, so it lists € 30 instead of € 120. This means you don't have to change the budget, but also means you ignore the deposits from your friends.
+1. 您将预算增加 90 欧元，总计为 190 欧元。这意味着您仍然有 70 欧元可花（190 欧元 - 120 欧元），但您的预算已更改。
+2. 您编辑费用，使其显示 30 欧元而不是 120 欧元。这意味着您不必更改预算，但也意味着您忽略了朋友们的存款。
 
-It's up to you what you do. _Personally_, I do nr. 2. It means that Firefly III shows me what I actually spent, and my own income isn't skewed by what people pay me back.
+由您决定做什么。_个人而言_，我选择第 2 种方法。这意味着 Firefly III 向我展示了我实际花费的金额，并且我的收入不会因朋友们偿还给我的款项而扭曲。
 
-## How do I handle (partial) refunds?
+## 如何处理（部分）退款？
 
-You may get a partial refund from a vendor. If you add this money as a deposit, the original transaction will not change. Your budgets will also still be affected. It's up to you to manage this, according to your preference. The expense account and revenue account cannot be merged. You cannot create a split transaction of different types (one withdrawal, one deposit).
+您可能会从供应商那里获得部分退款。如果您将这笔钱作为存款添加，则原始交易不会更改。您的预算也将仍然受到影响。您可以根据自己的喜好来管理此操作。费用账户和收入账户无法合并。您无法创建不同类型的拆分交易（一次提款，一次存款）。
 
-1. Update the original transaction to be the amount minus the refund. That way, it's like you never spent the money.
-2. Add a deposit for the refund, and increase your budget to match the new room for expenses you just created. It will still show up in reports as if you spent more than you did.
+1. 更新原始交易，使其金额减去退款。这样，就好像您从未花过这笔钱一样。
+2. 添加退款存款，并增加您的预算以匹配您刚刚创建的新支出空间。它仍然会显示在报告中，就好像您花了比实际更多的钱。
 
-Generally, the first method is recommended when the vendor makes a mistake. The second one is recommended when you overspent.
+通常，当供应商犯错时，建议使用第一种方法。当您超支时，建议使用第二种方法。
 
-## What do I do with cashback actions?
+## 如何处理现金返还操作？
 
-When you buy a new 500 TV, and they give you a 50 cashback. What do you do?
+当您购买一台新的 500 电视，他们会给您 50 元现金返还。您该怎么办？
 
-1. Register an 500 withdrawal for the TV and a 50 deposit for the cashback.
-2. Register just the withdrawal at 450.
+1. 注册 500 的电视提款和 50 的现金返还存款。
+2. 只注册 450 的提款。
 
-Both options are valid. You can't merge these in one transaction. But less is more, and I suggest the second option. That way you have less transactions to manage and the price you actually paid for the television is reflected in the transaction.
+两种选项都是有效的。您无法将这些合并到一个交易中。但越少越好，我建议使用第二种选项。这样，您需要管理的交易更少，并且您实际支付的电视价格反映在交易中。
 
-When you use the cashback to buy something else at a discount, apply the difference in the second transaction. So if you were able to buy a 90 blender for 40 with the cashback from the TV, make a withdrawal for 40.
+当您使用现金返还以折扣购买其他东西时，请在第二个交易中应用差额。因此，如果您能够使用电视的现金返还以 40 元购买价值 90 元的搅拌机，请进行 40 元的提款。

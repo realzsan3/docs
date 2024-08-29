@@ -9,12 +9,12 @@ copyright: "&copy; <a href=\"mailto:james@firefly-iii.org\">James Cole</a>,
 repo_url: https://github.com/firefly-iii/firefly-iii/
 edit_uri: https://github.com/firefly-iii/docs/tree/main/docs/docs
 site_url: https://docs.firefly-iii.org/
-dev_addr: 10.0.0.15:8000
+# dev_addr: 10.0.0.15:8000
 plugins:
   - search
-  - social:
-      cards_layout_options:
-        background_color: "#1e6581"
+  # - social:
+  #     cards_layout_options:
+  #       background_color: "#1e6581"
   - git-revision-date
   - minify:
       minify_html: true
@@ -36,10 +36,10 @@ nav:
       - Home: tutorials/index.md
       - Firefly III:
           - Your finances:
-              - My first accounts: tutorials/finances/first-steps.md
-              - Create accounts and transactions: tutorials/finances/first-accounts.md
+              - 您的第一个账户: tutorials/finances/first-steps.md
+              - 创建账户和交易: tutorials/finances/first-accounts.md
               - Manage a bill: tutorials/finances/bill.md
-              - Process a refund: tutorials/finances/refund.md
+              - 处理退款: tutorials/finances/refund.md
               - Manage your mortgage: tutorials/finances/mortgage.md
               - Manage multiple currencies: tutorials/finances/currencies.md
           - Data management:
@@ -53,7 +53,7 @@ nav:
   - How-to guides:
       - Home: how-to/index.md
       - General:
-          - How to debug things: how-to/general/debug.md
+          - 如何调试 Firefly III: how-to/general/debug.md
           - How to report security issues: how-to/general/report-security-issues.md
       - Firefly III:
           - How to install:
@@ -67,20 +67,20 @@ nav:
               - Using a self-managed server: how-to/firefly-iii/upgrade/self-managed.md
           - Advanced installation:
               - How to set up notifications: how-to/firefly-iii/advanced/notifications.md
-              - How to use different authentication: how-to/firefly-iii/advanced/authentication.md
+              - 如何使用不同的身份验证: how-to/firefly-iii/advanced/authentication.md
               - How to make a backup: how-to/firefly-iii/advanced/backup.md
               - How to set up your local language: how-to/firefly-iii/advanced/locales.md
               - How to configure cron jobs: how-to/firefly-iii/advanced/cron.md
           - Your finances:
-              - How to manage accounts: how-to/firefly-iii/finances/accounts.md
-              - How to manage budgets: how-to/firefly-iii/finances/budgets.md
+              - 如何管理账户: how-to/firefly-iii/finances/accounts.md
+              - 如何管理预算: how-to/firefly-iii/finances/budgets.md
               - How to organize transactions: how-to/firefly-iii/finances/transactions.md
-              - How to track cash: how-to/firefly-iii/finances/cash.md
-              - How to use bills: how-to/firefly-iii/finances/bills.md
-              - How to reconcile accounts: how-to/firefly-iii/finances/reconcile.md
+              - 如何跟踪现金: how-to/firefly-iii/finances/cash.md
+              - 如何使用账单: how-to/firefly-iii/finances/bills.md
+              - 如何对账: how-to/firefly-iii/finances/reconcile.md
               - How to manage liabilities: how-to/firefly-iii/finances/liabilities.md
-              - How to use recurring transactions: how-to/firefly-iii/finances/recurring.md
-              - How to use piggy banks: how-to/firefly-iii/finances/piggy-banks.md
+              - 如何使用循环交易: how-to/firefly-iii/finances/recurring.md
+              - 如何使用储蓄罐: how-to/firefly-iii/finances/piggy-banks.md
               - How to read reports: how-to/firefly-iii/finances/reports.md
           - More features:
               - Make it multi-user: how-to/firefly-iii/features/multi-user.md
@@ -195,6 +195,7 @@ nav:
 extra_css:
   - stylesheets/extra.css
 theme:
+  language: zh
   name: material
   custom_dir: overrides
   features:

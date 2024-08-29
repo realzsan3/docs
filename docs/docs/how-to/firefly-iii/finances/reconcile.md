@@ -1,53 +1,53 @@
-# How to reconcile accounts
+# 如何对账
 
-Although more and more people use online banking, a lot of users still receive paper bank statements in the mail, every week or every month. Firefly III has a "reconciliation" view that allows you to verify that your transactions exactly match your bank statement. This can also help to resolve incorrect balances after importing a large set of transactions into Firefly III.
+虽然越来越多的人使用网上银行，但许多用户仍然每周或每月通过邮件收到纸质银行对账单。Firefly III 具有一个“对账”视图，允许您验证您的交易是否与您的银行对账单完全匹配。这还可以帮助在将大量交易导入 Firefly III 后解决余额不正确的问题。
 
-## Open the reconciliation page
+## 打开对账页面
 
-Open the page from either the list of asset accounts, or from a single asset account page.
+从资产账户列表或单个资产账户页面打开页面。
 
-From a single account:
+从单个账户：
 
 ![The button is at the top of the chart](../../../images/how-to/firefly-iii/finances/reconcile-account-home.png)
 
-From the account overview:
+从账户概述：
 
 ![The button is in the menu on the right](../../../images/how-to/firefly-iii/finances/reconcile-account-index.png)
 
-## Start reconciling
+## 开始对账
 
-First, enter a date range and set the opening and closing balance as it shows on your bank statement. 
+首先，输入日期范围并设置与银行对账单上显示的开户余额和结账余额。
 
 ![These dates and amounts must match your bank statement.](../../../images/how-to/firefly-iii/finances/reconcile-set-amounts.png)
 
-For example:
+例如：
 
 * Start date: January 1st, 2018. Balance: € 120
 * End date: January 31st, 2018. Balance: € 788
 
-Next, press **Start reconciling** to continue.
+接下来，按 **开始对账** 继续。
 
-Firefly III will show you the transactions from this range, plus a few earlier and later dated transactions. For each transaction line on your bank statement, find the matching transaction in Firefly III and check the box next to the amount column. Your goal is to verify that your Firefly III transactions exactly match your bank statement. Go over your entire statement and check each transaction in Firefly III.  
+Firefly III 将显示此范围内的交易，以及一些较早和较晚的交易。对于银行对账单上的每条交易行，请在 Firefly III 中找到匹配的交易，然后选中金额列旁边的框。您的目标是验证您的 Firefly III 交易与您的银行对账单完全匹配。查看整个对账单并检查 Firefly III 中的每笔交易。
 
-- If you find duplicate transactions, you can click on the transaction description to view the transaction, and from that page you can delete the transaction. After deletion, you will be returned to the reconcile page. Previously checked transactions will be checked again.
-- If you find incorrect transactions, you can click the "edit" pencil icon, to go into edit mode. After edited, you will be returned to the reconcile view. Previously checked transactions will be checked again.
+- 如果您发现重复的交易，您可以单击交易描述以查看交易，然后从该页面删除交易。删除后，您将返回到对账页面。先前选中的交易将再次选中。
+- 如果您发现不正确的交易，您可以单击“编辑”铅笔图标进入编辑模式。编辑后，您将返回到对账视图。先前选中的交易将再次选中。
 
-After you have matched all transactions, look at the amount at the top of the screen in the section labeled "Reconciliation options". 
+对账完成后，请查看屏幕顶部“对账选项”部分中的金额。
 
-### Amount under "Reconciliation options" is less than zero
+### “对账选项”下的金额小于零
 
-This means that your Firefly III asset account has less money in it than it should have. Look for duplicate transactions or incorrect amounts and correct them as needed. When you press the "Store reconciliation" button you can let Firefly III create an automated transaction to correct this difference. 
+这意味着您的 Firefly III 资产账户中的余额应该比实际少。查找重复交易或不正确的金额并根据需要进行更正。当您按下“存储对账”按钮时，您可以让 Firefly III 创建一个自动交易来纠正此差异。
 
 ![When your account is too low on funds, you can allow Firefly III to create a corrective transaction.](../../../images/how-to/firefly-iii/finances/reconcile-negative-action.png)
 
-### Amount under "Reconciliation options" is more than zero
+### “对账选项”下的金额大于零
 
-This means that your Firefly III asset account has more money in it than it should have. Look for missing transactions or incorrect amounts and correct them as needed. When you press the "Store reconciliation" button you can let Firefly III create an automated transaction to correct this difference. 
+这意味着您的 Firefly III 资产账户中的余额应该比实际多。查找缺少的交易或不正确的金额并根据需要进行更正。当您按下“存储对账”按钮时，您可以让 Firefly III 创建一个自动交易来纠正此差异。
 
 ![When your account is too full, you can allow Firefly III to create a corrective transaction.](../../../images/how-to/firefly-iii/finances/reconcile-positive-action.png)
 
-### Amount under "Reconciliation options" is exactly zero!
+### “对账选项”下的金额正好为零！
 
-Congrats! This means that your Firefly III transactions exactly match your bank statement. You can now press "Store reconciliation" to mark the checkmarked transactions as reconciled.
+恭喜！这意味着您的 Firefly III 交易与您的银行对账单完全匹配。您现在可以按“存储对账”以将选中的交易标记为已对账。
 
 ![When there is no mismatch between your bank statements and Firefly III, you don't need to do anything.](../../../images/how-to/firefly-iii/finances/reconcile-neutral-action.png)

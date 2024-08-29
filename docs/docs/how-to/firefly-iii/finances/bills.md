@@ -1,53 +1,52 @@
-# How to use bills?
+# 如何使用账单
 
-In Firefly III a "bill" is a record of a subscription or a recurring bill that you need to pay, like your rent or a Spotify subscription. You can read more about it in the [explanation about bills](../../../explanation/financial-concepts/bills.md).
+在 Firefly III 中，“账单”是您需要支付的订阅或定期账单的记录，例如您的租金或 Spotify 订阅。您可以在 [有关账单的说明](../../../explanation/financial-concepts/bills.md) 中了解更多信息。
 
+您可以为您的常见定期费用创建账单。您可以使用 [规则](../features/rules.md) 将交易自动链接到账单。
 
-You can create bills for your common recurring expenses. You can use [rules](../features/rules.md) to automatically link transactions to bills.
+当您创建一个新账单时，Firefly III 会询问您您预计账单的最低和最高金额。这很重要，因为这两个金额的平均值用于图表和概述。
 
-When you create a new bill, Firefly III asks you for the minimum and maximum amount that you expect the bill to be. This is important, because the average of these two amounts is used in charts and overviews.
-
-## An overview of your bills
+## 您的账单概述
 
 ![Overview of bills](../../../images/how-to/firefly-iii/finances/overview-bills.png)
 
-On this screenshot you see the bill overview from the demo site. You see that bills can have a variety of periods, and that they can be active and inactive.
+在此屏幕截图中，您看到了演示站点上的账单概述。您看到账单可以有多种周期，并且可以是活动的或非活动的。
 
-You'll also see that Firefly III tells you when to expect the bill. 
+您还将看到 Firefly III 会告诉您何时可以期待账单。
 
 ![The bills on the dashboard](../../../images/how-to/firefly-iii/finances/bills-frontpage.png)
 
-The front page of Firefly III will also start showing the bills. This box takes the average expected amount of the bill (see ahead) and the amount already paid.
+Firefly III 的首页也将开始显示账单。此框采用账单的平均预期金额（见下文）和已支付的金额。
 
-## Create a new bill
+## 创建新账单
 
 ![Create a new bill](../../../images/how-to/firefly-iii/finances/create-bill.png)
 
-When you create a bill, you tell Firefly III the description and how often it repeats, etc., but also in what range you expect the bill to be.
+当您创建一个账单时，您告诉 Firefly III 描述和重复频率等，但也告诉它您预计账单的范围。
 
-You can also set the end date and the extension date. If you know [how to set up a cron job](../advanced/cron.md), Firefly III can alert you about these dates. 
+您还可以设置结束日期和延期日期。如果您知道 如何设置 [cron 作业](../advanced/cron.md)，Firefly III 可以提醒您这些日期。
 
-If you enter a number in the "skip" field, the bill will be automatically skipped every X times; a bill that arrives every 3 months can be entered by filling in "2".
+如果您在“跳过”字段中输入一个数字，则该账单将自动跳过每 X 次；可以通过填写“2”来输入每 3 个月到达一次的账单。
 
-The minimum and maximum amount and the period allow Firefly III to predict for you how much you should expect to spend on these bills. On the frontpage, a little box will tell you how you're doing.  
+最小和最大金额以及周期允许 Firefly III 为您预测您应该预计在这些账单上花费多少。在首页上，一个小框会告诉您您的表现如何。
 
-After you create a bill you are automatically redirected to the page to create a new rule. You can learn [how to manage rules](../features/rules.md). This new rule is autofilled to trigger on obvious things like the amount of the bill and the description you entered. Fine-tune the rule so any new transactions will auto-match the rule. 
+创建账单后，您将自动重定向到创建新规则的页面。您可以学习 [如何管理规则](../features/rules.md)。此新规则会自动填充以触发明显的事情，例如账单金额和您输入的描述。微调规则，以便任何新交易将自动匹配该规则。
 
-When you delete the bill, transactions associated with the bill will lose this association but will not be deleted.
+当您删除账单时，与账单关联的交易将失去此关联，但不会被删除。
 
-### The date of a bill
+### 账单的日期
 
-When you create a bill you also have to fill in the (first) date you expect the bill to hit. This date is purely cosmetic and will be used to inform you when the bill can be expected. For example:
+当您创建一个账单时，您还必须填写您预计账单到达的（第一个）日期。此日期纯粹是装饰性的，将用于通知您何时可以预期账单。例如：
 
-* A monthly bill, on the 3rd day of the month, will hit: 3 Jan, 3 Feb, 3 Mar, etc.
-* A weekly bill, starting on 15 Jan, will hit: 15 Jan, 22 Jan, 29 Jan, 5 Feb, etc.
+* 一个月度账单， 在每月的第 3 天，将命中：3 月 1 日、3 月 2 日、3 月 3 日等。
+* 一个每周账单，从 1 月 15 日开始，将命中：1 月 15 日、1 月 22 日、1 月 29 日、2 月 5 日等。
 
-Keep in mind that weekly bills may fall outside your expected range. At some point a weekly bill will hit 5 times in one month.
+请记住，每周账单可能会超出您的预期范围。有时，每周账单将在一个月内出现 5 次。
 
-## Bill overview
+## 账单概述
 
-Individual bills will end up looking like this picture:
+单个账单最终看起来像这张图片：
 
 ![Overview of a bill](../../../images/how-to/firefly-iii/finances/bills-show.png)
 
-You see here the most important data of a bill, plus the transactions associated with a bill.
+您在此处看到账单的最重要数据以及与账单关联的交易。

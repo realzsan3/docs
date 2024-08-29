@@ -3,68 +3,44 @@ hide:
   - feedback
 ---
 
-# Firefly III documentation
+# Firefly III 文档
 
-Welcome. This site contains all the documentation for **Firefly III** and the **Data Importer**. Please follow the links below or use the top navigation bar to go to the section of your choice. When in doubt, please use the search bar in the top right-hand corner.
+欢迎来到 Firefly III 和 Data Importer 文档站点。请点击下面的链接或使用顶部的导航栏来访问您需要的部分。如有疑问，请使用右上角的搜索栏。
 
-## [Tutorials](tutorials/index.md)
+## 入门指南
 
-Do you want to learn the basics of how to use **Firefly III** and the **Data Importer**? Check out the [tutorials](tutorials/index.md) section to find such information as:
+想要学习如何使用 Firefly III 和数据导入器？请查看 “教程” ([tutorials](tutorials/index.md)) 部分，您将找到以下信息：
 
-- [Set up your first set of bank accounts](tutorials/finances/first-steps.md)
-- [Predict expenses using bills](tutorials/finances/bill.md)
+*  [设置您的第一个银行账户组](tutorials/finances/first-steps.md)
+*  [使用账单预测支出](tutorials/finances/bill.md)
 
-More tutorials can be found in the [tutorials](tutorials/index.md) section.
+更多教程可以在 “教程” ([tutorials](tutorials/index.md)) 部分找到。
 
-## [How-to guides](how-to/index.md)
+## 操作指南
 
-Do you want to learn how to do specific tasks? Check out the [how-to guides](how-to/index.md) section to find such information as:
+想要学习如何完成特定任务？请查看 “操作指南” ([how-to guides](how-to/index.md)) 部分，您将找到以下信息：
 
-- [How to install Firefly III](how-to/firefly-iii/installation/docker.md)
-- [How to install the Data Importer](how-to/data-importer/installation/docker.md)
-- [How to use the command line](how-to/firefly-iii/features/cli.md)
-- [How to manage budgets](how-to/firefly-iii/finances/budgets.md)
+*  [如何安装 Firefly III](how-to/firefly-iii/installation/docker.md)
+*  [如何安装数据导入器](how-to/data-importer/installation/docker.md)
+*  [如何使用命令行](how-to/firefly-iii/features/cli.md)
+*  [如何管理预算](how-to/firefly-iii/finances/budgets.md)
 
-More guides can be found in the [how-to guides](how-to/index.md) section.
+更多指南可以在 “操作指南” ([how-to guides](how-to/index.md)) 部分找到。
 
-## [References](references/index.md)
+## 参考信息
 
-Do you want to learn what **Firefly III** and the **Data Importer** are capable of? Check out the [references](references/index.md) section to find such information as:
+想要了解 Firefly III 和数据导入器的功能？请查看 “参考信息” ([references](references/index.md)) 部分，您将找到以下信息：
 
-- [How to use the Firefly III API](references/firefly-iii/api/index.md)
-- The structure of [transactions](references/firefly-iii/transaction-types.md) and [accounts](references/firefly-iii/account-types.md)
+*  [如何使用 Firefly III API](references/firefly-iii/api/index.md)
+*  [交易](references/firefly-iii/transaction-types.md) 和 [账户](references/firefly-iii/account-types.md) 的结构
 
-More references can be found in the [references](references/index.md) section.
+更多参考信息可以在 “参考信息” ([references](references/index.md)) 部分找到。
 
-## [Explanation](explanation/index.md)
+## 项目介绍
 
-Do you want to learn what **Firefly III** is about? Check out the [explanation](explanation/index.md) section to find such information as:
+想要了解 Firefly III 的相关信息？请查看 “项目介绍” ([explanation](explanation/index.md)) 部分，您将找到以下信息：
 
-- [Who maintains Firefly III, and why](explanation/support.md)
-- [What the financial concepts behind Firefly III are](explanation/financial-concepts/transactions.md)
+*  [谁在维护 Firefly III 以及维护原因](explanation/support.md)
+*  [Firefly III 背后的财务概念](explanation/financial-concepts/transactions.md)
 
-More explanations can be found in the [explanation](explanation/index.md) section.
-
-<!-- HELP TEXT -->
-
-## Do you need help, or do you want to get in touch?
-
-Do you want to contact me? You can email me at [james@firefly-iii.org](mailto:james@firefly-iii.org) or get in touch through one of the following support channels:
-
-- [GitHub Discussions](https://github.com/firefly-iii/firefly-iii/discussions/) for questions and support
-- [Gitter.im](https://gitter.im/firefly-iii/firefly-iii) for a good chat and a quick answer
-- [GitHub Issues](https://github.com/firefly-iii/firefly-iii/issues) for bugs and issues
-- <a rel="me" href="https://fosstodon.org/@ff3">Mastodon</a> for news and updates
-
-<!-- END OF HELP TEXT -->
-
-<!-- SPONSOR TEXT -->
-
-## Support the development of Firefly III
-
-If you like Firefly III and if it helps you save lots of money, why not send me a dime for every dollar saved! 🥳
-
-OK that was a joke. If you feel Firefly III made your life better, please consider contributing as a sponsor. Please check out my [Patreon](https://www.patreon.com/jc5) and [GitHub Sponsors](https://github.com/sponsors/JC5) page for more information. You can also [buy me a ☕️ coffee at ko-fi.com](https://ko-fi.com/Q5Q5R4SH1). Thank you for your consideration.
-
-<!-- END OF SPONSOR TEXT -->
-
+更多介绍信息可以在 “项目介绍” ([explanation](explanation/index.md)) 部分找到。

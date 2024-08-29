@@ -1,34 +1,32 @@
-# My first accounts
+# 我的第一个账户
 
-Let's assume you managed to install Firefly III using the [how-to guides](../../how-to/index.md). You've got a working installation, and you're ready to go. What's next?
+假设您已经使用 [操作指南](../../how-to/index.md) 成功安装了 Firefly III。现在您拥有了一个可运行的安装程序，并且可以开始使用它了。接下来该做什么呢？
 
-In this tutorial you will learn how to set up your first accounts, so they match your bank statements. You will also learn how to create some transactions.
+在本教程中，您将学习如何设置您的第一个账户，使其与您的银行对账单相匹配。您还将学习如何创建一些交易。
 
-This tutorial assumes you already registered yourself, which is the final step of the installation procedure. As you finish the installation and visit Firefly III for the *first* time, you will see a registration form. Fill it in to create your new account, if you have not already done so.
+本教程假设您已经注册了您的账户，这是安装过程的最后一步。完成安装并首次访问 Firefly III 时，您将看到一个注册表单。如果您尚未注册，请填写该表单以创建您的新账户。
 
-## First setup
+## 首次设置
 
-You will see this screen when you run Firefly III for the first time (after registration):
+第一次运行 Firefly III 时（注册后），您将看到以下屏幕：
 
 ![Opening wizard](../../images/tutorials/finances/wizard.png)
 
-Choose your currency and language.
+选择您的货币和语言。
 
-Fill in the name of your bank. If you know your bank account's balance, don't fill it in. Instead, fill in *yesterday's* balance. This will make sure you can create transactions from today.  Firefly III will calculate today's balance for you, and this is a nice way to check if everything works as expected.
+填写您的银行名称。如果您知道您的银行账户余额，请不要填写它。相反，请填写 *昨天* 的余额。这将确保您可以从今天开始创建交易。Firefly III 将为您计算今天的余额，这也是一种很好的方式来检查一切是否按预期工作。
 
-Similarly, fill in yesterday's savings account balance, if you happen to have a savings account.
+同样，如果您有储蓄账户，请填写昨天的储蓄账户余额。
 
-## Check for correctness
+## 检查正确性
 
-Once you have filled in these details, the home page of Firefly III greets you.
+填写完这些详细信息后，Firefly III 的主页将欢迎您。
 
 ![Result](../../images/tutorials/finances/result.png)
 
-In the left menu, click Accounts > Asset accounts. Here you should see your bank accounts and some extra's, with yesterday's balance.
+在左侧菜单中，单击账户 > 资产账户。您应该在这里看到您的银行账户和一些额外的账户，以及昨天的余额。
 
-## Would you like to learn more?
+## 想要了解更多信息吗？
 
-- [Tutorial: create accounts and transactions](first-accounts.md)
-- [How to organize transactions](../../how-to/firefly-iii/finances/transactions.md)
-
-
+- [教程：创建账户和交易](first-accounts.md)
+- [如何组织交易](../../how-to/firefly-iii/finances/transactions.md)

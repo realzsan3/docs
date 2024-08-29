@@ -1,6 +1,6 @@
-# How to read reports
+# 如何阅读报告
 
-Firefly III offers a variety of financial reports that can help you keep track of your finances. Each report has a certain scope that you can set to your liking:
+Firefly III 提供各种财务报告，可帮助您跟踪财务状况。每个报告都有特定的范围，您可以根据需要进行设置：
 
 * The asset accounts involved.
 * The date range: from 1 day to 20 years

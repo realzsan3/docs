@@ -1,63 +1,62 @@
-# How to manage budgets
+# 如何管理预算
 
-Firefly III features budgets as a powerful way to manage your finances. To get started, visit the `/budgets` page and create your first budget. Just enter a name for now, nothing else.
+Firefly III 将预算作为一种强大的方式来管理您的财务。要开始使用，请访问 /budgets 页面并创建您的第一个预算。现在只需输入一个名称，其他什么都不需要。
 
-To learn more about how budgets work in Firefly III, you should read about [budgets in Firefly III](../../../explanation/financial-concepts/budgets.md).
+要了解有关 Firefly III 中预算如何工作的更多信息，您应该阅读有关 Firefly III 中的预算。
 
-Firefly III budgeting works best when you work from the first day of the month to the last. This is even true when you get paid weekly or 13 times a year (4-weekly). It's also true when you get paid some random moment in a month. For more information on this, read [the explanation on managing your personal finances](../../../explanation/firefly-iii/background/personal-finances.md).
+当您从月头工作到月底时，Firefly III 的预算功能效果最佳。即使您每周或每年 13 次（4 周一次）获得报酬，这也适用。如果您在某个随机时间点获得报酬，这也适用。有关此方面的更多信息，请阅读 有关管理个人财务的说明。
 
-![Create a budget](../../../images/how-to/firefly-iii/finances/create-budget.png)
+![创建一个预算](../../../images/how-to/firefly-iii/finances/create-budget.png)
 
-## Changing the date range
+## 更改日期范围
 
-The date range for budgets is tied to your view range, and you can change that in Preferences > Layout.
+预算的日期范围与您的视图范围相关联，您可以在首选项 > 布局中更改它。
 
-## Basic budgets
+## 基本预算
 
-Once you have a few budgets, you can link them to your expenses when you create a transaction. See also, [how to organize transactions](transactions.md).
+一旦您有了几个预算，您可以在创建交易时将它们链接到您的费用。另请参阅，如何组织交易。
 
-This is not very useful yet. So, on the `/budgets` page you  can set the maximum amount for the budget. This amount applies to the current period and for most users  this applies to the current month. Monthly budgeting is a common way of organizing your finances.
+这目前还不是很有用。因此，在 `/budgets` 页面上，您可以为预算设置最大金额。此金额适用于当前期间，对于大多数用户来说，适用于当前月份。每月预算是一种常见的组织财务方式。
 
 ![Overview](../../../images/how-to/firefly-iii/finances/budget-list.png)
 
-## Automated budgets
+## 自动化预算
 
 !!! note
-    I'm talking about months here, but this works equally well for weeks or quarters.
+    我在这里谈论的是月份，但这也同样适用于周或季度。
 
-When the next month arrives, your budget amounts are gone, since they only applied to the previous month. You can set them again based on your experience from the previous month.
+当下一个月到来时，您的预算金额将消失，因为它们仅适用于上个月。您可以根据上个月的经验再次设置它们。
+您还可以让 Firefly III 为您执行此操作。但是，这要求您知道 [如何运行 cron 作业](../advanced/cron.md).
 
-You can also make Firefly III do this for you. However, it requires that you know [how to run the cron job](../advanced/cron.md).
+仅在设置自动预算的第一个日期才会创建自动预算。如果 `cron` 作业没有在那个特定时间运行，则不会自动设置金额。因此，`cron` 作业应该每天运行。
 
-Auto-budgets are only created on the first day of the period they're set to. If the cron job does not run on that particular moment, the amount will not be set automatically. Hence, the cronjob should run daily.
-
-| Auto-budget period | Moment amount is set     |
+| 自动预算期间 | 设置金额的时刻     |
 |--------------------|--------------------------|
-| Daily              | Every day                | 
-| Weekly             | Every Monday             | 
+| Daily              | Every day                |
+| Weekly             | Every Monday             |
 | Monthly            | First day of the month   |
 | Quarterly          | First day of the quarter |
 | Every half year    | June 1st, December 1st   |
 | Yearly             | First day of the year    |
 
-You can't edit or change these moments. They are hard-coded into Firefly III.
+您无法编辑或更改这些时刻。 它们被硬编码到 Firefly III 中。
 
 ![Basic auto budget](../../../images/how-to/firefly-iii/finances/auto-budget-1.png)
 
-## Budgets that grow
+## 增长的预算
 
-You can also simply add money to the budget every month. That way, it grows every period. You start at 25, and if you spend nothing it grows to 50, 75, etc. every month.
+您还可以每月简单地向预算中添加资金。这样，它每个月都会增长。您可以从 25 开始，如果您不花任何钱，它每个月都会增长到 50、75 等。
 
 ![Growing auto budget](../../../images/how-to/firefly-iii/finances/auto-budget-2.png)
 
-## Budgets that grow, but correct for expenses
+## 增长但纠正费用的预算
 
-The previous trick works if you want unspent money to be available in the next month. But what happens when you spend way too much? Imagine a monthly 25,- budget. But you decide to spend 35,-. Now what? Using this little trick, Firefly III will set your next month's budget to 15,-, correcting for the 10,- overspend.
+如果希望未使用的资金在下个月可用，可以使用之前的技巧。但是，如果您花费太多怎么办？想象一个每月 25 的预算。但是您决定花费 35。现在怎么办？使用这个小技巧，Firefly III 将把下个月的预算设置为 15 ，以纠正 10 的超支。
 
-If you spend more than twice your allotted amount, Firefly III will set the next month's budget to a symbolic 1,-. It's up to you to decide how to deal with it.
+如果您花费的金额超过分配金额的两倍，Firefly III 将把下个月的预算设置为象征性的 1。如何处理取决于您。
 
 ![Also growing auto budget](../../../images/how-to/firefly-iii/finances/auto-budget-3.png)
 
-## Mixing periods
+## 混合周期
 
-Firefly III doesn't really handle mixed periods well. Setting both a yearly AND a monthly budget is tricky. You can do this by changing the view range on your `/preferences` page and then visit the `/budgets` page again. If these periods for a budget overlap too, your expense will be deducted from both amounts. Also, Firefly III will not automatically calculate what a yearly budget would be per month.
+Firefly III 并不擅长处理混合周期。同时设置年度和每月预算很棘手。您可以通过在您的 `/preferences` 页面上更改视图范围，然后再次访问 `/budgets` 页面来执行此操作。如果预算的这些周期也重叠，您的费用将从两个金额中扣除。此外，Firefly III 不会自动计算每月应为多少年度预算。
