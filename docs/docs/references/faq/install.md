@@ -1,11 +1,41 @@
 # General installation and running questions
 
+## Key path oauth-private.key does not exist or is not readable?
+
+If this file does not exist, you can run the following command:
+
+```bash
+php artisan passport:install
+```
+
+Afterwards, you can run the following commands to fix the permissions.
+
+```bash
+php artisan config:clear
+php artisan key:generate
+php artisan config:clear
+```
+
+And then:
+
+```bash
+sudo chown www-data:www-data storage/oauth-*.key
+sudo chmod 600 storage/oauth-*.key
+```
+
 ## Error "class \[auth\] does not exist"
+
+- Target class \[hash\] does not exist.
 
 Some users run into this issue when upgrading. Several things may work:
 
 - Start a new `.env` file instead of copying over the old one.
 - Make sure the `storage` directory, and all subfolders are writable, and NOT owned by `root`.
+- Remove all PHP files from the `bootstrap/cache` directory: `rm bootstrap/cache/*.php`.
+
+## Charts are not loading, and `email-decode.min.js` refuses to load?
+
+You are using Cloudflare as a CDN. Please disable "email obfuscation".
 
 ## Can I switch from or to SQLite, PostgreSQL or MySQL?
 
@@ -61,7 +91,7 @@ For Apache, use something like:
 </VirtualHost>
 ```
 
-## I can't seem to get https working with Caddy
+## I can't seem to get https working
 
 Set `TRUSTED_PROXIES` to `*`. See also [this issue](https://github.com/firefly-iii/firefly-iii/issues/1632) on GitHub.
 
@@ -326,3 +356,11 @@ If you're using Docker, this may also happen when you run "php artisan" commands
 
 If the problem persists run your cron job as the "www-data" user so the cache directory doesn't get mixed up: `sudo -u www-data php artisan [..]`.
 
+## Key path "oauth-public.key" does not exist or is not readable
+
+This happens on some Docker installations and sometimes in Proxmox. I still don't know the exact root cause for this, but the solution could be to run the following command, either on the command line (where you installed Firefly III) or inside the container that is running Firefly III
+
+* `php artisan firefly-iii:laravel-passport-keys`
+* `docker exec -it (container) php artisan firefly-iii:laravel-passport-keys`
+
+Without those files in place and readable, Firefly III will not be able to function properly.

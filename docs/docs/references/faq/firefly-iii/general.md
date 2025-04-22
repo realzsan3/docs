@@ -2,7 +2,7 @@
 
 ## Is it multi-user?
 
-Yes. For security reasons Firefly III opens up the registration form only for the first user. See also [how to make Firefly III mult-user](../../../how-to/firefly-iii/features/multi-user.md). Keep in mind that you won't be able to _share_ your administration. This is a work in progress.
+Yes. For security reasons Firefly III opens up the registration form only for the first user. See also [how to make Firefly III multi-user](../../../how-to/firefly-iii/features/multi-user.md). Keep in mind that you won't be able to _share_ your administration. This is a work in progress.
 
 ## Can I share one administration with multiple users?
 
@@ -34,6 +34,47 @@ Two differences between zero-sum budgeting and Firefly III:
 When I built Firefly III I was over 5K in debt and this helped me pay it off in less than a year: a monthly budget routine separated from my income, fixed amounts at the start of each month, all income to the savings account. Firefly III is geared towards predetermining your budgets, allocating funds to those budgets *only* and then spend it.
 
 See [personal finances](../../../explanation/firefly-iii/background/personal-finances.md) for more information.
+
+## Will you add AI to Firefly III?
+
+The short answer is no.
+
+I've been playing around with AI and Firefly III extensively. Due to the hallucinatory nature of large language models it's absolutely impossible to get this to work reliably and accurately. Which are the two things I want Firefly III to be. 
+
+I see of course the added value of trying to categorize transactions based on the data they contain. But this involves either sending your data to the cloud or running a model locally. The first option will not be added to Firefly III, and the second option is not feasible for many people.
+
+Also, it would be nice to formulate [custom rules](../../../how-to/firefly-iii/features/rules.md) in natural language, but the hard work of parsing the language into a set of database entries that Firefly III can handle still comes to the developer. Unless of course, I accept that the system may hallucinate and do something else entirely. I've also been playing with this it seems very difficult to get AI to build complex rules, which is the only thing you would want to use it for in the first place.
+
+Similarly, it is not impossible to get an AI to generate the search query you need based on your natural language input. But I don't need to add something to Firefly III to do that: you can build that using any AI tool yourself. 
+
+Predicting financial records is notoriously difficult. Firefly III used to have a prediction engine, but it requires financial data (which LLMs can't use anyway) and more meta-data, which Firefly III does not save. Incidental expenses and holiday trips will always mess up the predictions, and there is a lot of data needed to get a feel for somebody's "life rhythm". AI's can't predict any better than a human can if the data is not there.
+
+Apart from the death/hype spiral that AI is in right now, I do not believe that feeding Firefly III data into a large language model will add quality to the system. It will only add complexity and confusion.
+
+Of course, you can still do this yourself. The Firefly III [API](../../../how-to/firefly-iii/features/api.md) and [webhooks](../../../how-to/firefly-iii/features/webhooks.md) feature allow you to feed anything into anything, and get results back. It should not be hard to add a suggestion engine to Firefly III by simply using a webhook to feed you the suggestions back.
+
+## Why does Firefly III not support accounting feature X?
+
+* Why isn't Firefly III correct, when it comes to expense accounts, revenues and other monetary concepts?
+* Why do you say you support double-entry accounting, when technically you don't?
+
+The Firefly III financial concepts such as accounts, transactions and what-not are based on what the developer thought was good financial practice when they built Firefly III. It's not entirely (or at all) based on what you would learn in accounting school. The developer is not an accountant, although he kind of pretends to be one. But many things an accountant would expect or find reasonable, may not work or may not be present in Firefly III.
+
+On [GitHub](https://github.com/firefly-iii/firefly-iii/issues) there have been several discussions on this topic. It's important to know, before you start another one, that the core concepts and possibilities within Firefly III will not change. This includes those weird concepts that make it difficult to manage returns and refunds. "It's not a bug, it's a feature." The developer of Firefly III is well aware of the idiosyncrasies of the system, and pointing them out will not really change their mind. Sorry.
+
+Right now, Firefly III has a lot of history and a lot of work yet to be done to make it ready for the future. Although better support for some common accountancy concepts is one of them, it is not particularly high on the list. Especially since this would also break the fundamental concepts of Firefly III as they are right now, even if they are wrong.
+
+Since this is open source software however, you are in luck. If you feel there is room for "Firefly III - The Accountant Edition", feel free [to fork the project and build it](https://github.com/firefly-iii/firefly-iii/fork). The developer will happily link to your project from the Firefly III website and documentation. 
+
+See [personal finances](../../../explanation/firefly-iii/background/personal-finances.md) for more information.
+
+## When will you release version (the next version)?
+
+As a rule, I do not comment on the release date of future version. I do this for free in my spare time, so it is difficult to predict when the next version will be released. I do have a [roadmap](https://roadmap.firefly-iii.org), that you can use to guesstimate when the next release will be out.
+
+On the roadmap, find either Firefly III or the data importer. For the next patch, minor or major version, see if the GitHub tickets that you see (bugs, enhancements or features) are tagged with "fixed". If there are many, a new release is probably coming soon.
+
+It is also common that a new release is followed by several smaller releases, to fix issues.
 
 ## Will Firefly III support PSD2?
 
@@ -74,3 +115,4 @@ If you want to, feel free to host Firefly III yourself and sell user accounts. I
 This excludes all the (legal) work you'll need to have in place to manage other people's finances hassle-free.
 
 Personally, right now I'm just not interested in turning this into a business. I'm as happy I can be with the way things are right now. Thank you.
+

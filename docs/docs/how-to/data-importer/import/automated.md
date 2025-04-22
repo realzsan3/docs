@@ -13,8 +13,11 @@ First, do this:
 Then, in the `.importer.env`-file:
 
 - Add `IMPORT_DIR_ALLOWLIST=/import`
-- Add value for `FIREFLY_III_ACCESS_TOKEN`
-- Add `NORDIGEN` or `SPECTRE` credentials
+- Add a value for `FIREFLY_III_ACCESS_TOKEN`
+- Add `NORDIGEN` or `SPECTRE` credentials (`NORDIGEN` is used for GoCardless).
+- Set `CAN_POST_AUTOIMPORT=true`
+- Set `CAN_POST_FILES=true`
+
 
 And in the Docker Compose file from the installer, mount a local directory to `/import` in the container:
 

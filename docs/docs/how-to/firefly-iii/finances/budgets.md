@@ -46,7 +46,6 @@ Firefly III 将预算作为一种强大的方式来管理您的财务。要开�
 ## 增长的预算
 
 您还可以每月简单地向预算中添加资金。这样，它每个月都会增长。您可以从 25 开始，如果您不花任何钱，它每个月都会增长到 50、75 等。
-
 ![Growing auto budget](../../../images/how-to/firefly-iii/finances/auto-budget-2.png)
 
 ## 增长但纠正费用的预算

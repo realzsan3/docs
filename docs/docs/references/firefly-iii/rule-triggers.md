@@ -8,9 +8,6 @@ If you want to know more, please check out [how to create a rule](../../how-to/f
     All triggers can be inverted. By checking the "NOT"-box on the rule creation page, the trigger will do the opposite, i.e. NOT match on a description.
 
 
-!!! info "PostgreSQL"
-    PostgreSQL databases are generally case-sensitive, and so will these triggers also be case-sensitive.
-
 ## Description and content
 
 Triggers that match on textual content. All triggers have varieties: starts with, ends on, contains, is exactly.
@@ -29,7 +26,7 @@ Properties of the transaction in question.
 3. If it has any attachments
 4. If it has a (any) category
 5. If it has a (any) budget
-6. If it has a (any) bill
+6. If it has a (any) subscription
 7. If it has a (any) tag
 8. If it has (any) notes
 9. If it has an external URL
@@ -76,7 +73,7 @@ Meta-data includes all other data related to the transaction. All the following 
 2. SEPA CI
 3. Category
 4. Budget
-5. Bill
+5. Subscription
 6. External ID
 7. Internal reference
 8. External URL

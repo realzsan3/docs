@@ -12,7 +12,7 @@ The best way to upgrade is to use the "Straight from GitHub" instructions below.
 ## Straight from GitHub
 
 !!! warning "Upgrading by pulling the remote repository"
-    It's no longer possible to upgrade Firefly III by simply pulling the code from the `main` or `develop` branch of the repository. Generated (JS) code and other dependencies are not in the repository, so your upgraded installation may not work as expected.
+    It's no longer possible to upgrade Firefly III by pulling the code from the `main` or `develop` branch of the repository. Generated (JS) code and other dependencies are not in the repository, so your upgraded installation may not work as expected.
 
 v%FFVERSION is the [latest version](https://version.firefly-iii.org/).
 
@@ -92,7 +92,6 @@ Run the following commands to upgrade the database and the application:
 
 ```bash
 php artisan migrate --seed
-php artisan firefly-iii:decrypt-all
 php artisan cache:clear
 php artisan view:clear
 php artisan firefly-iii:upgrade-database

@@ -5,6 +5,8 @@ Firefly III does not come with a built-in backup routine. Using your native OS t
 !!! warning "Do not use the export function as a backup mechanism"
     The export function of Firefly III is *not* a backup mechanism
 
+GitHub user [@ddyykk](https://github.com/ddyykk) has written excellent [this backup guide](https://github.com/orgs/firefly-iii/discussions/9960) with some scripts too. Check it out!
+
 ## Self-managed installation backup
 
 Grab the following and store it somewhere safe:
@@ -70,7 +72,7 @@ Download the [firefly-iii-backuper.sh](https://gist.github.com/dawid-czarnecki/8
 Create a cron job that will run regularly, like so. This will create the necessary backups in the `.tar` file, named after the current date.
 
 ```bash
-1 01 * * * bash /home/myname/backuper.sh backup /home/backup/$(date '+%F').tar
+1 01 * * * bash /home/myname/backuper.sh backup /home/backup/$(date '+\%F').tar
 ```
 
 The same script can also restore the Docker configuration and the database, getting you up and running again. You can run this on the command line:

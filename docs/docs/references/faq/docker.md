@@ -4,7 +4,7 @@
 
 - [Firefly III](https://dev.azure.com/Firefly-III/_git/MainImage?path=/Dockerfile)
 - [Firefly III Data Importer](https://dev.azure.com/Firefly-III/_git/ImportToolImage)
-- [Firefly III shared base image](https://dev.azure.com/Firefly-III/_git/BaseImage?path=/apache-8.3/Dockerfile)
+- [Firefly III shared base image \(web\)](https://dev.azure.com/Firefly-III/_git/BaseImage?path=/Dockerfile.web) and [Firefly III shared base image \(cli\)](https://dev.azure.com/Firefly-III/_git/BaseImage?path=/Dockerfile.cli)
 
 ## Which Docker tags are available?
 
@@ -14,9 +14,15 @@ The instructions always assume `fireflyiii/core:latest`. This is the latest stab
 * `fireflyiii/core:alpha`. This tag contains alpha releases.
 * `fireflyiii/core:develop`. Always the latest develop image. Maybe unstable.
 
+## Can I use Docker secrets?
+
+Yes, but keep in mind that Docker (Swarm) secrets may not work because the container does not run as root. A possible solution is outlined [in this Docker Community Forums discussion](https://forums.docker.com/t/only-root-user-has-access-to-the-secret/102774) and detailed [in this GitHub discussion](https://github.com/orgs/firefly-iii/discussions/9788).
+
 ## For which platforms the Firefly III Docker image built?
 
-All Docker tags are built for ARMv7, ARM64 and AMD64. ARMv6 is not included, so these images will *not* work on the Raspberry Pi Zero, Raspberry Pi 1 (A+B) or Raspberry Pi Compute Module.
+All Docker tags are built for `linux/amd64` and `linux/arm64`. Others, like `linux/386`, `linux/arm/v6` and `linux/arm/v7` are no longer supported, so these images will *not* work on the Raspberry Pi Zero, Raspberry Pi 1 (A+B) or Raspberry Pi Compute Module.
+
+It is still possible to run and use Firefly III on these platforms (and other devices), but because of the maintenance and security burden that comes with supporting many platforms, I've opted not to supprt them any more.
 
 ## How do I set TLS in Firefly III or the data importer?
 
@@ -33,6 +39,10 @@ This usually happens when you did not set `TRUSTED_PROXIES=*`.
 ## Which other settings are available for the Docker image?
 
 There are many environment variables that you can set in Firefly III. Just check out the [default env file](https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.env.example) that lists them all.
+
+## Allowed memory size of xxx bytes exhausted?
+
+Start the container with `PHP_MEMORY_LIMIT=512M` or more.
 
 ## Can I run it under a reverse proxy from a subdirectory?
 
@@ -94,7 +104,17 @@ This is an error that happens on Synology boxes with an old kernel. I'm sorry, t
 
 ## The database password is wrong, but I'm 100% sure it's correct
 
-If you start the database container with a `MYSQL_PASSWORD` that you change later, it won't change in the database. Destroy the volume + container and start over.
+If you start the database container with a `MYSQL_PASSWORD` that you change later, it won't change in the database. Destroy the volume + container and start over. This also happens when you start Firefly III for the first time, "to see if it works", and then decide to configure a more secure password.
+
+If this happens to you there is no easy way to fix this unless you happen to have saved the random root password that the database generated when it first started, and nobody does that. 
+
+What you must do to fix this:
+
+- Stop and remove all Firefly III containers: database, cron, Firefly III, the Data Importer
+- Remove all related volumes: upload, db and perhaps others.
+- Restart the Docker Compose file or restart your container(s).
+
+This should regenerate everything, and use the correct passwords.
 
 ## I get 'failed to open stream: Permission denied' on log files
 

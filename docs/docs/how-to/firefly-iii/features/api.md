@@ -2,7 +2,7 @@
 
 The Firefly III API is a REST-based JSON API that you can use to talk to (almost) every aspect of Firefly III. If you're interested you can read [the full spec](https://api-docs.firefly-iii.org/).
 
-Talking to the API can be done with any tool like Postman of simply cURL. Keep in mind that the [demo site](../../../explanation/firefly-iii/about/demo.md) of Firefly III will probably block your requests (this is to protect against script kiddies). Your own installation should work fine, however.
+Talking to the API can be done with any tool like Postman or cURL. Keep in mind that the [demo site](../../../explanation/firefly-iii/about/demo.md) of Firefly III will probably block your requests (this is to protect against script kiddies). Your own installation should work fine, however.
 
 Firefly III offers the following end points that can be used in applications that support the OAuth2 workflow.
 
@@ -81,6 +81,8 @@ curl -X GET 'https://your-domain/api/v1/webhooks' \
 ## It doesn't work
 
 Many things can go wrong when you try to talk to the API. Even the data importer doesn't always work on the first try.
+
+Make sure you have a header `Accept: application/json`, or Firefly III will not respond with JSON (or even the correct response header).
 
 If you are trying to get the data importer to work, please [check out the FAQ](../../../references/faq/data-importer/general.md).
 

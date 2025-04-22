@@ -1,8 +1,14 @@
 # Cron jobs
 
-Firefly III has several feature that will only work when the cron job is running.  Automated budgets, recurring transactions, bill warnings and up-to-data currency exchange rate information all need a working cron job to function properly.
+Firefly III has several feature that will only work when the cron job is running.  Automated budgets, recurring transactions, subscription warnings and up-to-data currency exchange rate information all need a working cron job to function properly.
 
 You should read up on [budgets](../finances/budgets.md) if you want to use cron jobs for auto-budgets. There are some interesting details to know about.
+
+## Cron authentication
+
+To run the cron job, you must do so on the command line, or over the web. If you try to access the cron job over the web, you have to provide an access token. This token can be found on your `/profile` page under the "Command line token" header. This will prevent others from spamming your cron job URL. An alternative to this token value is the `STATIC_CRON_TOKEN` environment variable. You can set this using the `.env` file, or by setting it through Docker. A little ahead on this page the difference is explained.
+
+If you have multiple users that use your Firefly III installation, it is only necessary for one user to set up the cron job. The cron job will run for all users. It is OK if multiple users set up multiple runs of the cron job.
 
 
 ## Calling a command
@@ -70,6 +76,11 @@ You can also use a tool called cURL.
 
 The `[token]` value can be found on your `/profile` under the "Command line token" header. This will prevent others from spamming your cron job URL. An alternative to this token value is the `STATIC_CRON_TOKEN` environment variable. You can set this using the `.env` file, or by setting it through Docker. A little ahead on this page the difference is explained.
 
+If you have multiple users that use your Firefly III installation, it is only necessary for one user to set up the cron job. The cron job will run for all users. It is OK if multiple users set up multiple runs of the cron job. 
+
+But, it is not necessary to configure a run of the cron job for all users. So, it does not matter which access token you use: that of any user, or the `STATIC_CRON_TOKEN`.
+
+
 ## Cron jobs in Docker
 
 The Docker image does *not* support cron jobs, but the Docker Compose file includes a cron job container. You can see it in [the online docker compose file](https://github.com/firefly-iii/docker/blob/main/docker-compose.yml).
@@ -91,33 +102,49 @@ Either way, the following instructions apply to Docker.
 
 ### Docker compose
 
-This is already present in the default Docker compose file.
+This is already present in the [default Docker compose file](https://github.com/firefly-iii/docker/blob/main/docker-compose.yml).
 
 ```
-cron:
-  image: alpine
-  command: sh -c "echo \"0 3 * * * wget -qO- http://app:8080/api/v1/cron/[TOKEN]\" | crontab - && crond -f -L /dev/stdout"
+  cron:
+    image: alpine
+    restart: always
+    container_name: firefly_iii_cron
+    env_file: .env
+    command: sh -c "
+      apk add tzdata
+      && ln -s /usr/share/zoneinfo/${TZ} /etc/localtime
+      | echo \"0 3 * * * wget -qO- http://app:8080/api/v1/cron/REPLACEME;echo\" 
+      | crontab - 
+      && crond -f -L /dev/stdout"
 ```
 
-The `[token]` value can be found on your `/profile` under the "Command line token" header. Earlier on this page, you can read on the static token as well.
+The `REPLACEME` value can be found on your `/profile` under the "Command line token" header. Earlier on this page, you can read on the static token as well.
 
-If you have used the expanded Docker compose file or if you have added the cron container yourself, simply (re)start your stack. The cron job will run automatically. You can see the cron container if you do something like `docker container ls`:
+If you have used the expanded Docker compose file or if you have added the cron container yourself, (re)start your stack. The cron job will run automatically. You can see the cron container if you do something like `docker container ls`:
 
 ![Show relevant containers](../../../images/how-to/firefly-iii/advanced/container-list.png)
 
 You can see the logs of the cron container by running `docker logs [container-id]`. Take the exact ID from the previous command.
 
-(TODO screenshot)
+In the logs you can see the cron job once it has run. This is what it looks like:
 
-In the logs you can see the cron job once it has run.
+```
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing tzdata (2025b-r0)
+OK: 7 MiB in 16 packages
+crond: crond (busybox 1.37.0) started, log level 8
+crond: USER root pid  11 cmd wget -qO- http://app:8080/api/v1/cron/REPLACEME;echo
+{"recurring_transactions":{"job_fired":true,"job_succeeded":true,"job_errored":false,"message":"Recurring transactions cron job fired successfully."},"auto_budgets":{"job_fired":true,"job_succeeded":true,"job_errored":false,"message":"Auto-budget cron job fired successfully."},"exchange_rates":{"job_fired":true,"job_succeeded":true,"job_errored":false,"message":"Exchange rates cron job fired successfully."},"bill_notifications":{"job_fired":true,"job_succeeded":true,"job_errored":false,"message":"Bill notification cron job fired successfully."}}
+```
 
 ### From outside the container (http)
 
-If you do not use the cron container, you can simply call your local container over the (local) network to execute the cron job. Check out the preceding documentation, it's no different.
+If you do not use the cron container, you can call your local container over the (local) network to execute the cron job. Check out the preceding documentation, it's no different.
 
 ```
 # cron job for Firefly III using cURL
-0 3 * * * curl http://127.0.0.1:8080/api/v1/cron/klI0JEC7TkDisfFuyjbRsIqATxmH5qRW
+0 3 * * * curl http://127.0.0.1:8080/api/v1/cron/REPLACEME
 ```
 
 ### From outside the container (cli)
@@ -182,7 +209,7 @@ Enter the URL in the following format. Keep in mind that the image shows the WRO
 
 `https://your-firefly-installation.com/api/v1/cron/[token]`
 
-The `[token]` value can be found on your `/profile` under the "Command line token" header. This will prevent others from spamming your cron job URL. An alternative to this token value is the `STATIC_CRON_TOKEN` environment variable. You can set this using the `.env` file, or by setting it through Docker. A little ahead on this page the difference is explained.
+The `[token]` value can be found on your `/profile` under the "Command line token" header. This will prevent others from spamming your cron job URL. An alternative to this token value is the `STATIC_CRON_TOKEN` environment variable. You can set this using the `.env` file, or by setting it through Docker. A little earlier on this page the difference is explained.
 
 ![The result of setting up IFTTT](../../../images/how-to/firefly-iii/advanced/ifttt-result.png)
 

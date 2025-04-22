@@ -1,8 +1,16 @@
 # Common data import issues and questions
 
+## Firefly III gives a page that says "Empty", and nothing else
+
+Make sure you **uncheck** the "Confidential" checkbox in your OAuth Client settings.
+
 ## All transactions are imported as today?
 
 Make sure that the date field in your CSV file (`2023-09-17`) is marked as the "Transaction" date, and make sure the format (`Y-m-d`) matches the actual content in the file. Follow the format in [this table](https://www.php.net/manual/en/datetime.format.php).
+
+## I get 504 Gateway Timeout errors
+
+When you use the web interface of the data importer, the web page will time out after abou 600 seconds. Your reverse proxy (if present) may even be more strict. Although the import process continues in the background, the page is "lost" and you will not get status updates anymore. Please use smaller batches when importing data so the page does not time out.
 
 ## Mixed content
 

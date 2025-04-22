@@ -1,17 +1,14 @@
 # Using Firefly III, questions
 
-## Auto complete is case-sensitive?
-
-This happens when the underlying database is Postgres, which is case-sensitive by default. You may run into this when searching for `FLO` doesn't yield `flower`.
-
-There's not much I can do about this. When the auto-complete searches in your database for entries, it may do so in a case-sensitive manner.
-
-The good news is that once the search is over, the result is cached by your browser. These cached entries will be searched for in a case-**in**sensitive manner.
-
 ## Firefly III can't tell the difference between `a` and `ä`
 
 This happens because by default MySQL can't see the difference. At the moment, I cannot fix this.
 
+## Why is the report page showing so many years of presets? It goes back to the year 0025!
+
+This happens when you have one or more transactions imported as "25" instead of "2025". Firefly III auto-generates the list of reports for you. This list starts with the oldest transaction, and continues until the newest one.
+
+Look at your transactions and correct the oldest one. This will fix it.
 
 ## I keep getting redirected to the index after editing something
 
@@ -32,6 +29,10 @@ That should solve it.
 ## Why is the minimum password length 16 characters?
 
 The minimum password length can't be changed. [NIST](https://pages.nist.gov/800-63-3/sp800-63b.html) recommendations prevail.
+
+## Can I sort tables on amount or name?
+
+No, sorry. This is something I hope to fix in a new layout.
 
 ## I'm running Internet Explorer or Edge and nothing works?
 

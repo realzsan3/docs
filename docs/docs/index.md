@@ -12,7 +12,8 @@ hide:
 想要学习如何使用 Firefly III 和数据导入器？请查看 “教程” ([tutorials](tutorials/index.md)) 部分，您将找到以下信息：
 
 *  [设置您的第一个银行账户组](tutorials/finances/first-steps.md)
-*  [使用账单预测支出](tutorials/finances/bill.md)
+*  [使用账单预测支出](tutorials/finances/subscription.md)
+
 
 更多教程可以在 “教程” ([tutorials](tutorials/index.md)) 部分找到。
 
