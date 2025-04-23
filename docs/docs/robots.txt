@@ -7,4 +7,4 @@ Disallow: /
 User-agent: ChatGPT-User
 Disallow: /
 
-Sitemap: https://firefly3.111533.xyz//sitemap.xml
+Sitemap: https://firefly3.111533.xyz/sitemap.xml

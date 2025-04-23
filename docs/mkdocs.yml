@@ -1,6 +1,6 @@
 ---
-site_name: Firefly III 文档
-site_description: 中文文档 for Firefly III
+site_name: Firefly III（Firefly3）中文手册 - 安装配置、记账、预算教程
+site_description: Firefly III（Firefly3）是开源的个人财务管理系统。本站提供全面中文文档，包括安装教程、账户与预算管理、报表功能等，帮助用户轻松掌握这款强大记账工具。
 site_author: James Cole
 copyright: "&copy; <a href=\"mailto:james@firefly-iii.org\">James Cole</a>,
   licensed under <a
@@ -8,7 +8,7 @@ copyright: "&copy; <a href=\"mailto:james@firefly-iii.org\">James Cole</a>,
   areAlike 4.0 International</a>."
 repo_url: https://github.com/firefly-iii/firefly-iii/
 edit_uri: https://github.com/firefly-iii/docs/tree/main/docs/docs
-site_url: https://docs.firefly-iii.org/
+site_url: https://firefly3.111533.xyz/
 # dev_addr: 10.0.0.15:8000
 plugins:
   - search
